@@ -1,0 +1,45 @@
+$primary-color: red;
+@mixin rotate($value) {
+    transform: rotate($value);
+}
+
+.container {
+    background: #f1f1f1;
+    margin: 20px;
+    padding: 20px;
+}
+
+.pagination-container{
+
+    &__tabs {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    &__tab {
+        color: black;
+        background: #f2f2f2;
+        border: 1px solid grey;
+        width: 30px;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+            background: grey;
+            color: white;
+        }
+
+        &.active {
+            color: white;
+            background: grey;
+        }
+
+        &:nth-child(1) {
+            @include rotate(180deg);
+        }
+        &:nth-child(2) {
+            @include rotate(180deg);
+        }
+
+    }
+}

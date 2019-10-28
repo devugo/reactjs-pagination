@@ -1,0 +1,45 @@
+.container {
+  background: #f1f1f1;
+  margin: 20px;
+  padding: 20px;
+}
+
+.pagination-container__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.pagination-container__tab {
+  color: black;
+  background: #f2f2f2;
+  border: 1px solid grey;
+  width: 30px;
+  text-align: center;
+}
+
+.pagination-container__tab:hover {
+  cursor: pointer;
+  background: grey;
+  color: white;
+}
+
+.pagination-container__tab.active {
+  color: white;
+  background: grey;
+}
+
+.pagination-container__tab:nth-child(1) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.pagination-container__tab:nth-child(2) {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+/*# sourceMappingURL=App.css.map */
