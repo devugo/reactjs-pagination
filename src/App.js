@@ -6,7 +6,11 @@ import Pagination from './components/Pagination';
 const App = () => {
     return (
         <div className="container">
-            <Pagination />
+            <Pagination 
+                totalItems={100}
+                itemsPerPage={10}
+                paginationSpan={5}
+            />
         </div>
     )
 }
