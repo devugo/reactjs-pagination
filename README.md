@@ -5,7 +5,7 @@ Render this components to manage pagiantions betweeen data
 
 Installation
 ============
-install reactjs-pagination with <span style="color: brown;>npm</span>
+install reactjs-pagination with <span style="color: brown;">npm</span>
 
 ```
 $ npm install --save @devugo/reactjs-pagination
