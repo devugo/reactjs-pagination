@@ -1,3 +1,9 @@
+ReactJS Pagination
+==================
+
+React Pagination for your web applications
+
+```
 import React, { useState } from 'react';
 import ReactDom from 'react-dom';
 // import Pagination from '../../dist/Pagination';
@@ -48,3 +54,4 @@ const Example = props => {
 }
 
 ReactDom.render(<Example />, document.getElementById("example-root"));
+```
