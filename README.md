@@ -1,11 +1,11 @@
 ReactJS Pagination
 ==================
-React Pagination for your web applications.
+A simple React Pagination for your web applications.
 Render this components to manage pagiantions betweeen data
 
 Installation
 ============
-install reactjs-pagination with <span style="color: brown;">npm</span>
+install reactjs-pagination with npm
 
 ```
 $ npm install --save @devugo/reactjs-pagination
@@ -14,12 +14,11 @@ $ npm install --save @devugo/reactjs-pagination
 Usage
 =====
 
-This component is very easy to use and user friendly. Just provide the required props and you are good to get your pagination rendereed!
+This component is very easy to use and user friendly. Just provide the required props and you are good to get your pagination rendered!
 
 ```
 import React, { useState } from 'react';
 import ReactDom from 'react-dom';
-// import Pagination from '../../dist/Pagination';
 import Pagination from '../components/Pagination';
 import { data } from './data';
 
@@ -33,28 +32,8 @@ const Example = props => {
         setCurrentPage(value);
     }
     
-    let ctrl = (itemPerPage*currentPage) - 1;
-    let filtered = [];
-    let checker = 0;
-    while(checker < 3){
-        if(ctrl < totalItems){
-            filtered.push(ctrl);
-        }
-        ctrl--;
-        checker++;
-    }
     return (
         <div>
-            <div>
-                {
-                    filtered.map((val, index) => 
-                        <div key={index}>
-                            <h3>{data[val].title}</h3>  
-                            <p>{data[val].description}</p>
-                        </div>  
-                    )
-                }
-            </div>
             <Pagination 
                 totalItems={totalItems}
                 itemsPerPage={itemPerPage}
