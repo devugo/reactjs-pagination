@@ -1,7 +1,20 @@
 ReactJS Pagination
 ==================
+React Pagination for your web applications.
+Render this components to manage pagiantions betweeen data
 
-React Pagination for your web applications
+Installation
+============
+install reactjs-pagination with <span style="color: brown;>npm</span>
+
+```
+$ npm install --save @devugo/reactjs-pagination
+```
+
+Usage
+=====
+
+This component is very easy to use and user friendly. Just provide the required props and you are good to get your pagination rendereed!
 
 ```
 import React, { useState } from 'react';
