@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import '../App.scss';
 
 const Pagination = props => {
 
