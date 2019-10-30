@@ -3,16 +3,18 @@ import '../App.scss';
 
 const Pagination = props => {
 
-    let pageCount = Math.ceil(props.totalItems/props.itemsPerPage);
-    let paginationSpan = props.paginationSpan;
+    let pageCount = Math.ceil(props.totalItems/props.itemsPerPage); // No of pages in terms of 'totalItems and itemsPerPage' props
+    let paginationSpan = props.paginationSpan; //  length of pagination in terms of 'paginationSPan'
 
     let pageNumbers = []; // Array to store all the pages numbers
     let currPaginations = []; // Array to store the visible paginations based on the pagination span
     
     for(var i = 1; i<=pageCount; i++){
         if(i <= paginationSpan){
+            // Get current pagination display
             currPaginations.push(i);
         }
+        // Get all paginations length (no of pages)
         pageNumbers.push(i);
     }
     
@@ -36,32 +38,28 @@ const Pagination = props => {
             }else if(value > pageCount){
                 return;
             }
-            // props.handleChange(value);
         }
 
         let currPaginationsState = currentPaginations;
-        // console.log(currPaginationsState);
 
         if(currPaginationsState.indexOf(value) <= 0 && value > 1){
+            // Control to monitor the pagination to prevent it spilling over to negative value
             currPaginationsState.unshift(value-1); // Add an element in front of an array
             currPaginationsState.pop(); // Remove the last element in an array
             props.handleChange(value);
-            // console.log(1);
+            
         }else if(currPaginationsState.indexOf(value) >= currPaginationsState.length - 1 && value < pageCount){
+            // Control to monitor the pagination to prevent it spilling past the total number of pages paginations
             currPaginationsState.shift(); // Remove the first element from the array
             currPaginationsState.push(value+1); // Add an element to the end of an array
             props.handleChange(value);
-            // console.log(2);
-        }else if(pageNumbers.indexOf(value) > -1){
             
+        }else if(pageNumbers.indexOf(value) > -1){
             props.handleChange(value);
-            // console.log(3);
+            
         }
         
     }, [currentPaginations, pageCount, currPaginations]);
-
-    // console.log(pageNumbers);
-    // console.log(currentPaginations);
     
     return (
         <div className="pagination-container">
