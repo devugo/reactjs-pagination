@@ -1,6 +1,6 @@
 {
   "name": "@devugo/reactjs-pagination",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pagination with react",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,9 @@
     "@babel/preset-react": "^7.6.3",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.6",
+    "quagga": "^0.12.1",
     "react": "^16.11.0",
+    "react-barcode-reader": "0.0.1",
     "react-dom": "^16.11.0"
   },
   "devDependencies": {
@@ -33,5 +35,13 @@
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devugo/reactjs-pagination.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devugo/reactjs-pagination/issues"
+  },
+  "homepage": "https://github.com/devugo/reactjs-pagination#readme"
 }

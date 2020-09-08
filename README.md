@@ -7,10 +7,6 @@ Installation
 ============
 install reactjs-pagination with npm
 
-```
-$ npm install --save @devugo/reactjs-pagination
-```
-
 Usage
 =====
 

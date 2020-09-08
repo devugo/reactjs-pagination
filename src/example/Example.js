@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import ReactDom from 'react-dom';
+import Quagga from 'quagga';
+import BarcodeReader from 'react-barcode-reader'
 // import Pagination from '../../dist/Pagination';
 import Pagination from '../components/Pagination';
 import { data } from './data';
@@ -9,6 +11,7 @@ let paginationSpan = 3;
 let totalItems = data.length;
 const Example = props => {
     const [currentPage, setCurrentPage] = useState(1);
+    const [result, setResult ] = useState('no result!');
 
     const handleChange = value => {
         setCurrentPage(value);
@@ -24,6 +27,16 @@ const Example = props => {
         ctrl--;
         checker++;
     }
+
+    /* Start of barcode reader test */
+    const handleScan = (data) => {
+        setResult(data);
+    }
+    const handleError = (err) => {
+        console.error(err)
+    }
+    /* End of barcode reader test */
+
     return (
         <div>
             <div>
@@ -35,6 +48,13 @@ const Example = props => {
                         </div>  
                     )
                 }
+            </div>
+            <div>
+                <BarcodeReader
+                    onError={handleError}
+                    onScan={handleScan}
+                />
+                <p>{result}</p>
             </div>
             <Pagination 
                 totalItems={totalItems}
