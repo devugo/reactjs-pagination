@@ -3,10 +3,6 @@ ReactJS Pagination
 A simple React Pagination for your web applications.
 Render this components to manage pagiantions betweeen data
 
-Installation
-============
-install reactjs-pagination with npm
-
 Usage
 =====
 
